@@ -27,7 +27,7 @@ public class SampleAppControllerIntegrationTest {
 
     @Test
     public void testController() {
-        String expMsg = "Welcome Greetings!";
+        String expMsg = "Welcome Greetings!Customer[id=1, customerName='customer name 1', Occupation'Occupation - human']";
 
         ResponseEntity<String> response = testRestTemplate.getForEntity(url,String.class);
         Assertions.assertEquals(expMsg, response.getBody(), "Message matches");
